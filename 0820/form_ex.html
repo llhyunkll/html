@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>회원가입</title>
+		<style>
+			input[type=text], input[type=password]{width:200px;height=25px;}
+			td:first-child{text-align:center;font-weight:bold}
+		</style>
+	</head>
+	<body>
+		<form action="result.html" method="post">
+			<div style="width: 800px;margin: 0 auto;">
+			
+			<img src="../img/logo.png" style="vertical-align: middle;">
+			<span style="vertical-align: middle;">회원가입</span>
+			
+			<hr style="border:1px solid blue;"><!-- 선두께, 실선, 색깔 -->
+			
+			<br>
+			<img src="../img/icon.png" style="vertical-align: middle;"> <b>정보입력 및 본인확인</b>
+			<br>
+			<table border="1" width="800px">
+				<tr>
+					<td width="20%">아이디</td>
+					<td><input type="text" name="id">
+					<input type="button" value="중복확인"></td>
+				</tr>
+				<tr>
+					<td>비밀번호</td>
+					<td><input type="password" name="psw"></td>
+				</tr>
+				<tr>
+					<td>비밀번호 확인</td>
+					<td><input type="password" name="pswd"></td>
+				</tr>
+				<tr>
+					<td>이름</td>
+					<td><input type="text" name="name"></td>
+				</tr>
+				<tr>
+					<td>성별</td>
+					<td><input type="radio" name="gerder" value="male">남성
+						<input type="radio" name="gerder" value="female">여성
+						<input type="checkbox" name="agreeGed" value="yes">
+						선택정보(성별) 수집 및 이용 동의</td>
+				</tr>
+				<tr>
+					<td>생년월일</td>
+					<td><select name="year">
+							<option>2020</option>
+							<option>2019</option>
+							<option>2018</option>
+							<option>2017</option>
+						</select>년
+						<select name="month">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>월
+						<select name="day">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>일
+					</td>
+				</tr>
+				<tr>
+					<td>이메일</td>
+					<td><input type="text" name="email">@
+					<input type="text" name="domain"></td>
+				</tr>
+				<tr>
+					<td>휴대폰</td>
+					<td><input type="text" name="tel">
+					<input type="checkbox" name="agreeTel" value="yes">
+					선택정보(휴대폰) 수집 및 이용 동의</td>
+				</tr>
+				<tr>
+					<td>인증방법</td>
+					<td><input type="radio" name="check" value="telNm">휴대폰
+					<input type="radio" name="check" value="email">이메일
+					<input type="button" value="인증">
+					</td>
+				</tr>
+				<tr>
+					<td>인증번호</td>
+					<td><input type="text" name="cheNm">
+					<input type="button" value="확인"></td>
+				</tr>
+			</table>
+			</div>
+			<br>
+			<div style="text-align: center;"><button>확인</button></div>
+		</form>
+	</body>
+</html>
