@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form_data</title>
+	</head>
+	<body>
+		<form>
+			
+			<input type="reset" value="초기화" style="cursor:pointer;">
+			
+			<!-- submit의 기능을 가진 이미지버튼 -->
+			<input type="image" src="../img/btn.png" width="100px">
+			
+			<hr>
+			<!-- accept 옵션은 해당하는 파일만 선택할 수 있는 기능이다 -->
+			<input type="file" accept="image/jpg">
+			
+			<hr>
+			<textarea cols="50" rows="20"></textarea><!-- 텍스트를 입력할수 있는 창 50칸, 20줄 -->
+			<hr>
+			<input type="url" name="url">
+			<input type="email" name="email">이메일
+			<input type="tel" name="tel">전화번호
+			<input type="color" name="color">
+			<input type="date" name="date">
+			<input type="week" name="week">
+			<input type="number" name="number" min="1" max="10" step="2">
+			<input type="range" name="range" min="1" max="10">
+		</form>
+		
+		<hr>
+		<fieldset>
+			<legend>인적사항입력</legend>
+			이름:<input type="text" name="name" autocomplete="off" placeholder="이름을 작성해주세요"><br>
+			전화번호:<input type="text" name="tel" autofocus value="010-0000-0000" readonly>
+			
+		</fieldset>
+		
+		<hr>
+		<!-- radio버튼만 클릭하기에는 너무 버튼이 작음? 그래서 label로 앞의 텍스트를 클릭해도 선택될수있게 연결해줌 -->
+		<label for="male">label남성</label><input type="radio" name="gender" value="male" id="male">남성<br>
+		<label for="female">label여성</label><input type="radio" name="gender" value="female" id="female">여성
+		
+		<hr>
+		<form>
+			<input type="text" pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" required>
+			<input type="submit" value="확인">
+		</form>
+	
+	</body>
+	
+</html>
