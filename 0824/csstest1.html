@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS test</title>
+		<!-- 외부스타일 -->
+		<link href="../css/public.css" rel="stylesheet">
+		
+		<!-- 내부스타일 : 현재의 파일에만 적용, 우선순위가 내부가 더 높음. type은 생략가능 -->
+		<style type="text/css">
+			h3{
+			color:red;}
+			.box{
+				background-color:yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+		<h3>1.css</h3>
+		CSS(Cascading Style Sheets)<br>
+		문서의 스타일(꾸밈)을 설정한다<br>
+		외부스타일 : 여러 개의 html파일에 동시에 같은 스타일을 적용 할 때<br>
+		별도의 css 파일로 저장해야함<br>
+		내부스타일 : 현재 페이지에 스타일을 적용 할 때 <br>
+		현재 html파일에 &lt;style&gt;&lt;/style&gt;을 지정<br>
+		<input type="button" value="확인">
+		<br>
+		<div id="result1"></div>
+			
+	</body>
+</html>
