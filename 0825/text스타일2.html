@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>text스타일</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<style>
+		.box > h1{
+			text-shadow: 100px 50px 5px blue; 
+		}
+		textarea{
+			direction:rtl;
+		}
+		#div3 #h1{
+			text-transform:uppercase;
+		}
+		#div3 #h2{
+			text-transform:lowercase;
+		}
+		#div3 #h3{
+			text-transform:capitalize;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<pre>
+				text-shadow : x y 선명한정도 색상;
+				text-shadow : 100px 50px 20(숫자가 클수록 흐려짐)px red;
+			</pre>
+			<h1>text스타일</h1>
+			<div class="dd" id="div1">
+			<p>일반적으로 커피 열매(커피체리)의 씨앗인 커피 콩, 혹은 그 씨앗을 볶은 뒤 갈아서 물에 우려내서 만드는 음료.</p>
+		</div>
+		<div class="box">
+			<div class="dd" id="div2">
+			<h2>direction:rtl;(right to left)(ler)</h2>
+			<textarea rows="20" cols="60"></textarea>
+		</div>
+		<div class="box">
+			<div class="dd" id="div3">
+			<p>text-transform:uppercase;</p>
+			<h1 id="h1">Happy New Year!!!</h1>
+			<p>text-transform:lowercase;</p>
+			<h1 id="h2">Happy New Year!!!</h1>
+			<p>text-transform:capitalize;</p>
+			<h1 id="h3">Happy New Year!!!</h1>
+		</div>
+	
+	</body>
+</html>
