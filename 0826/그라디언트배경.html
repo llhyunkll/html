@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>그라디언트배경</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<style>
+			.box #result1, .box div{
+				width:500px;
+				height:300px;
+				border:1px solid blue;
+				margin:5px;
+				padding:10px;
+			}
+			#result1{
+				background-image:linear-gradient(red, yellow);/*여러가지 색을 섞어서 배경에 쓰고 싶을 때는 image로 쓰임*/
+			}
+			#result2{
+				background-image:linear-gradient(to right, red, yellow);
+			}
+			#result3{
+				background-image:linear-gradient(45deg, blue, yellow, green);
+			}
+			#result4{
+				background-image:linear-gradient(skyblue, green, white);
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>타이틀</h3>
+			<input type="button" value="확인">
+			<div id="result1">
+				background-image:linear-gradient(red, yellow);
+			</div>
+			<div id="result2">
+				background-image:linear-gradient(to right, red, yellow);
+			</div>
+			<div id="result3">
+				background-image:linear-gradient(45deg, blue, yellow, green);
+			</div>
+			<div id="result4">
+				background-image:linear-gradient(skyblue, green, white);
+			</div>
+
+		</div>
+	</body>
+</html>
