@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>layout-test</title>
+		<style>
+			body{
+				min-width:700px;
+			}
+			
+			header, nav, section, footer{
+				box-sizing:border-box;
+			}
+			header{
+				background:#ffff82;
+				width:100%;
+				height:180px;
+				text-align:center;
+				padding:20px;
+				margin:5px 10px 2px;
+			}
+			#title{
+				padding:15px 10px 3px;
+			}
+			nav{
+				background:#ffcfde;
+				width:calc(25% - 1%);
+				height:500px;
+				padding:20px 5px;
+				margin:5px 5px 1%;
+				float:left;
+			}
+			ul{
+				list-style-type:square;
+			}
+			section{
+				background:#4295c2;
+				width:calc(75% - 1%);
+				height:500px;
+				padding:20px 5px;
+				margin:5px;
+				float:right;
+			}
+			.in{
+				height:170px;
+				border:2px dotted blue;
+				margin:20px 30px;
+				padding:20px 30px;
+				border-radius:50px; 
+				
+			}
+			#test1, #test2{
+				word-wrap:break-word;
+			}
+			footer{
+				background:#c242b9;
+				height:100px;
+			 	padding:10px;
+			 	margin:5px;
+			 	clear:both;
+			
+			}
+			#foot{
+				margin:35px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1 id="title">My Blog Page</h1>
+			<p>시맨틱 웹</p>
+		</header>
+		<nav>
+			<h3>Links</h3>
+			<ul>
+				<li><a href="http://www.naver.com">네이버</a></li>
+				<li><a href="http://www.daum.net/">다음</a></li>
+				<li><a href="https://www.w3schools.com/">w3school</a></li>
+			</ul>
+			<figure style="text-align:center;">
+				<img src="../img/카푸치노.jpg" alt="카푸치노이미지" width="100px">
+				<figcaption style="text-align:center;">카푸치노</figcaption>
+			</figure>
+		</nav>
+		<section>
+			<div class="in">
+				<h3>시맨틱 태그</h3>
+				<p id="text1">
+				옵티마이저(Optimizer)는 사용자가 질의한 SQL문에 대해
+				최적의 실행 방법을 결정하는 역할을 수행한다. 이러한 최적의 실행 방법을
+				실행계획(Execution Plan)이라고 한다.
+				</p>
+			</div>
+			<div class="in">
+				<h3>div와 span</h3>
+				<p id="test2">
+				옵티마이저(Optimizer)는 사용자가 질의한 SQL문에 대해 
+				최적의 실행 방법을 결정하는 역할을 수행한다. 이러한 최적의 실행 방법을 
+				실행계획(Execution Plan)이라고 한다.
+				</p>
+			</div>
+		</section>
+		<footer>
+			<p style="text-align: center;" id="foot">Copyright (c)2020 MJ</p>
+		</footer>
+	</body>
+</html>

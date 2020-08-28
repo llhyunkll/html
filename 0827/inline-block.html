@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Inline_block</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<style>
+			span{
+				background:yellow;
+				display:inline-block;
+				width:50%;
+				height:100px;/*span태그는 크기 조절을 할 수 없음*/
+				/*display:block; 한블록으로 설정함*/
+			}
+			p{
+				background:#fd98ff;
+				width:50%;
+				height:60px;
+			}
+			.box #result1{
+				display:none;/*고정되게 안보이게???*/
+			}
+		</style>
+		<script>
+		window.onload = function(){
+			//id가 result1인 요소를 검색
+			//res1 = document.getElementById('result1');
+			//var res1 = document.querySelector('#result1'); 
+			//var로 타입 지정해주면 지역변수가 되어 아래에서 사용못함?
+			res1 = document.querySelector('#result1');
+			
+			//span, p태그 검색
+			//vsp = document.getElementsByTagName("span");
+			//vsp = document.querySelectorAll("span");
+			//결과 vsp는 배열 vsp[0]
+			vsp = document.querySelector("span");
+			
+			//vp = document.getElementsByTagName("p");
+			//vp = document.querySelectorAll("p");
+			//결과 vsp는 배열 vp[0]
+			vp = document.querySelector("p");
+
+		}
+			function proc1(){
+				//id가 result1인 요소를 검색
+				//res1 = document.getElementById('result1');
+				//res1 = document.querySelector('#result1'); //위로
+				res1.style.display = 'block';
+				
+				//span, p태그 검색
+				//vsp = document.getElementsByTagName("span");
+				//vsp = document.querySelector("span");
+				vsp.style.display = 'none';
+				
+				//vp = document.getElementsByTagName("p");
+				vp = document.querySelector("p");
+				vp.style.display = 'none';
+			}
+			function proc2(){
+				res1.style.display = 'none';
+				vsp.style.display = 'block';
+				vp.style.display = 'block';
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>display</h3>
+			display:none; 안보인다<br>
+			display:block; 줄이바뀌면서 크기조절가능<br> 
+			display:inline; 줄이 안바뀐다 크기조절안됨<br>
+			display:inline-block; 줄이안바뀌는데 크기조절가능<br>
+			<br>
+			확인버튼 클릭하면 div id=result1인 요소를 보이게 하고<br>
+			span, p태그는 안보이게한다.<br>
+			<input type="button" value="확인" onclick="proc1()"><!-- 인라인요소 -->
+			<input type="button" value="확인" onclick="proc2()">
+			<span>무궁화 꽃이 피었습니다</span><!-- 인라인 -->
+			<p>무궁화 꽃이 피었습니다</p><!-- 블록 -->
+			<div id="result1">채송화</div>
+		</div>
+	</body>
+</html>

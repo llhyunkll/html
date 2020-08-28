@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>layout-test</title>
+		<link rel="stylesheet" href="../css/layout_test.css">
+		<style>
+			.in{
+				height:170px;
+				border:2px dotted blue;
+				margin:20px 30px;
+				padding:20px 30px;
+				border-radius:50px; 
+				}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h2 id="title">달에 쓰는 일기</h2>
+			<p>나의 이야기를 묵묵히 들어주는건  달뿐이었다.</p>
+		</header>
+		<div class="container">
+			<nav>
+				<h3>Links</h3>
+				<ul>
+					<li><a href="http://www.naver.com">네이버</a></li>
+					<li><a href="http://www.daum.net/">다음</a></li>
+					<li><a href="https://www.w3schools.com/">w3school</a></li>
+				</ul>
+				<figure style="text-align:center;">
+					<img src="../img/카푸치노.jpg" alt="카푸치노이미지" width="100px">
+					<figcaption style="text-align:center;">카푸치노</figcaption>
+				</figure>
+			</nav>
+			<section>
+				<div class="in">
+					<h3>시맨틱 태그</h3>
+					<p id="text1">
+					옵티마이저(Optimizer)는 사용자가 질의한 SQL문에 대해
+					최적의 실행 방법을 결정하는 역할을 수행한다. 이러한 최적의 실행 방법을
+					실행계획(Execution Plan)이라고 한다.
+					</p>
+				</div>
+				<div class="in">
+					<h3>div와 span</h3>
+					<p id="test2">
+					옵티마이저(Optimizer)는 사용자가 질의한 SQL문에 대해 
+					최적의 실행 방법을 결정하는 역할을 수행한다. 이러한 최적의 실행 방법을 
+					실행계획(Execution Plan)이라고 한다.
+					</p>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<p style="text-align: center;" id="foot">Copyright (c)2020 MJ</p>
+		</footer>
+	</body>
+</html>
