@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Script1</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1(){
+				alert("Hello~~");
+				//date 객체 생성
+				now = new Date();
+				//document.write(now); //새로운document를 만들어서 출력
+				
+				// html요소  id가 result1인 요소를 검색
+				//document.querySelector("#result1");
+				let vres = document.getElementById("result1"); //id로 접근하기때문에 # 붙이지 않아도 됨 실행속도는 더 빠름
+				vres.innerHTML = now;
+			}
+			function proc2(){
+				now = new Date();
+				datetime = now.toLocaleString();
+				date = now.toLocaleDateString();
+				time = now.toLocaleTimeString();
+				
+				vr2 = document.getElementById("result2");
+				vr2.innerHTML = "toLocaleString : " + datetime + "<br>";
+				vr2.innerHTML += "toLocaleDateString : "+  date + "<br>";
+				vr2.innerHTML += "toLocaleTimeString : " + time + "<br>";
+				//vr2.textContent += time + "<br>";
+				
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>스크립트1</h3>
+			변수선언 : var 변수명; let 변수명; const 변수명; (생략) 변수명;<br>
+			now = new Date();
+			
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div>
+
+		<div class="box">
+			<h3>스크립트2</h3>
+			날짜 형식 변경 <br>
+			now.toLocalString()<br>
+			now.toLocalDateString()<br>
+			now.toLocalTimeString()<br>
+			출력<br>
+				vr2 = document.getElementById("result2");<br>
+				vr2.innerHTML = 내용 : 내용속에 html태그가 있을 때<br>
+				vr2.textContent = 내용 : 내용속에 html태그가 없을 때<br>
+			
+			<input type="button" value="확인" onclick="proc2()">
+			<div id="result2"></div>
+		</div>
+	</body>
+</html>

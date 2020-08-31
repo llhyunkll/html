@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>prompt성적구하기</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1() {
+				input = prompt("점수 입력", "0~100사이");
+				
+				str = "입력값 : " + input + "<br>";
+				
+				input = parseInt(input / 10); //javascript에서는 
+				//정수/정수가 정수로 나오지 않아서 정수로 바꿔줌
+				
+				switch(input){ 
+				case 10: //break;가 없어서 case 9로 내려감
+				case 9: res = "A학점"; break;
+				case 8: res = "B학점"; break;
+				case 7: res = "C학점"; break;
+				case 6: res = "D학점"; break;
+				default : res = "F학점"; break;
+				}
+				
+				str += "성적 : " + res + "<br>";
+				document.querySelector("#result1").innerHTML = str;
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>성적구하기</h3>
+			
+			prompt를 이용하여 점수(0~100)를 입력한다<br>
+			
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div>
+	</body>
+</html>

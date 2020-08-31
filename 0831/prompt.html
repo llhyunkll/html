@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Prompt</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script type="text/javascript">
+			function proc1() {
+				// 입력받기
+				var value1 = prompt("정수 입력1", "1~100사이");
+				var value2 = prompt("정수 입력1", "1~100사이");
+				
+				sumstr = value1 + value2; // 각각 String으로 받기 때문에 문장 연결됨 
+				sum = parseInt(value1) + parseInt(value2);
+				
+				// 출력
+				vr1 = document.querySelector('#result1');
+				vr1.innerHTML = "입력 1 : " + value1 + "<br>";
+				vr1.innerHTML += "입력 2 : " + value2 + "<br>";
+				vr1.innerHTML += "결 과  : " + sumstr + "<br>";
+				vr1.innerHTML += "결 과  : " + sum + "<br>";
+			}
+			
+			function proc2() {
+				
+				val1 = prompt("정수입력1");
+				val2 = prompt("정수입력2");
+				calc = prompt("연산자 입력");
+				
+				
+/* 				if(calc == "+"){
+					result = parseInt(val1) + parseInt(val2);	
+				}else if(calc == "-"){
+					result = parseInt(val1) - parseInt(val2);
+				}else if(calc == "*"){
+					result = parseInt(val1) * parseInt(val2);
+				}else if(calc == "/"){
+					result = parseInt(val1) / parseInt(val2);
+				}
+ */				
+				
+				switch(calc){
+				case "+" :
+					result = parseInt(val1) + parseInt(val2); break;
+				case "-" :
+					result = val1 - val2; break;
+				case "*" :
+					result = val1 * val2; break;
+				case "/":
+					result = val1 / val2; break;
+				}
+				
+				
+				out = document.querySelector('#result2');
+				out.innerHTML = val1 + calc + val2 + " = " +result ;
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>입력받기</h3>
+			prompt("입력하세요","12345"[생략가능]);<br>
+			parameter1 : 필수<br>
+			parameter2 : 선택<br>
+			리턴 결과형 : String<br>
+			리턴 결과값을 정수로 변환 후  덧셈연산을 한다<br>
+			parseInt(입력값)<br>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div>
+		
+		<div class="box">
+			<h3>입력받기2</h3>
+			정수2개와 연산자1개를 입력받아 연산의 결과를 출력<br>
+			입력 : prompt("정수1")<br>
+			출력 : result2<br>
+			<input type="button" value="확인" onclick="proc2()">
+			<div id="result2"></div>
+		</div>
+	</body>
+</html>

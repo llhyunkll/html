@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>input_text</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function calc() {
+				//id가 x, y인 요소로 검색접근
+				vx = document.querySelector('#x').value;
+				vy = document.querySelector('#y').value; //String타입으로 반환됨
+				
+				sum = parseInt(vx) + parseInt(vy);
+				
+				document.querySelector('#sum').value = sum;
+				
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>입력받기</h3>
+			input요소의 값을 script에서 사용(get, set) : value<br>
+			정수1 : <input type="text" id="x"><br>
+			정수2 : <input type="text" id="y"><br>
+			<input type="button" value="확인" onclick="calc()"><br>
+			결과 : <input type="text" id="sum"><br>
+		</div>
+	</body>
+</html>
