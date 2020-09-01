@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>회원가입</title>
+		<style>
+			fieldset {
+				width:35%;
+			}
+			input[type=text], input[type=password]{
+				width:200px;height=25px;
+			}
+			table{border-collapse:collapse;}
+		</style>
+	</head>
+	<body>
+		<form action=" " method="post">
+		<fieldset>
+		<table border="1">
+			<legend>회원정보입력</legend>
+			<tr>		
+				<td width="120px">아이디</td>
+				<td><input type="text" name="id"></td>
+			</tr>
+			<tr>
+				<td>패스워드</td>
+				<td><input type="password" name="psw"></td>
+			</tr>
+			<tr>
+				<td>패스워드 확인</td>
+				<td><input type="password" name="pswd"></td>
+			<tr>	
+				<td>이름</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>휴대폰 번호</td>
+				<td><input type="tel" name="tel"></td>
+			</tr>
+			<tr>
+			<td>이메일</td>
+			<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td>생일</td>
+				<td>
+				<select name="year">
+					<option>2000</option>
+					<option>1999</option>
+					<option>1998</option>
+					<option>1997</option>
+					<option>1996</option>
+					<option>1995</option>
+				</select>년
+				<select name="month">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+				</select>월
+				<select name="day">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+				</select>일<br>
+				</td> 
+			</tr>
+			<tr>
+				<td>홈페이지</td>
+				<td><input type="text" name="homepage"></td>
+			</tr>
+			<tr>
+				<td>성별</td>
+				<td><input type="radio" name="gender" value="male">남성
+				<input type="radio" name="gender" value="female">여성</td>
+			</tr>
+		</fieldset>
+		</table>
+		</form>
+	</body>
+</html>

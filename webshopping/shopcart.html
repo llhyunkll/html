@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>쇼핑 카트</title>
+		<style type="text/css">
+			table {
+				width:50%;
+				
+			}
+			table{border-collapse:collapse;}
+			input[type=button]{
+				margin: 5px 2px;
+			}
+			h3 {
+				color: red;
+				text-decoration-line: underline;
+			}
+			input[type=number], input[type=text]{
+				width:50px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<h3>Shopping Cart</h3>
+		<table border="1">
+			<tr>
+				<th>품목</th>
+				<th>가격</th>
+				<th>수량</th>
+				<th>합계</th>
+			</tr>
+			<tr>
+				<td>컴퓨터 세트</td>
+				<td>2,000,000원</td>
+				<td><input type="number" name="number" value="0" min="0" max="10" step="1"></td>
+				<td><input type="text" name="cnt" value="0"></td>
+			</tr>
+			<tr>
+				<td>티셔츠</td>
+				<td>50,000원</td>
+				<td><input type="number" name="number" value="0" min="0" max="10" step="1"></td>
+				<td><input type="text" name="cnt" value="0"></td>
+			</tr>
+			<tr>
+				<td>음악파일</td>
+				<td>1,000원</td>
+				<td><input type="number" name="number" value="0" min="0" max="10" step="1"></td>
+				<td><input type="text" name="cnt" value="0"></td>
+			</tr>
+			<tr>
+				<td>영화파일</td>
+				<td>5,000원</td>
+				<td><input type="number" name="number" value="0" min="0" max="10" step="1"></td>
+				<td><input type="text" name="cnt" value="0"></td>
+			</tr>
+		</table>
+		<div>
+			<input type="button" value="계산">
+			<input type="button" value="구매">
+			<input type="reset" value="초기화">
+			<br>
+			<p><a>Back to Home</a></p>
+		</div>
+	</body>
+</html>

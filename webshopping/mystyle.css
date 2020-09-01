@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+
+article{
+	float : left;
+	width : 31%;
+	height: 400px;
+	border : 1px solid #f2f2f2;
+	margin: 5px;
+	padding:1px 2px;
+	text-align:center;
+}
+
+
+article img{
+	width:200px;
+	
+	
+}
+
+
+article input[type = button]{
+	
+	
+}
+
+
+#contents{
+	width : 90%;
+	margin : 0px auto;
+    height: 100%;
+    text-align: center;
+	
+}
+
+
