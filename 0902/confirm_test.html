@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>confirm</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1(){
+// 				while(true){
+// 				// 1~10사이의 정수를 입력 - 0을 입력하면 종료
+// 				// 구구단을 출력
+//				
+// 				// 계속할까요? 질문(confirm) ? - 취소 버튼 클릭하면 종료
+// 				}
+
+				while(true){
+					su = prompt("정수 입력", "1~10사이");
+					res = "***" + su + "단***<br>";
+					for(i=1; i<10; i++){
+						res += su + " * " + i + " = " + (su*i) + "<br>";
+					}
+					document.querySelector('#result1').innerHTML = res;
+					
+					cont = confirm("계속하시겠습니까?");
+					if(!cont) break;
+					
+				}
+
+
+
+
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>confirm</h3>
+			실행 중 시용자의 대답을 전달한다.
+			예 : 계속하겠습니까? 확실합니까?
+			
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div>
+	</body>
+</html>
