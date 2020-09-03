@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>배열연습</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1() {
+				arr =[]; 
+				// 배열 선언 
+				while(true){
+					// 입력
+					a = prompt("이름을 입력하세요");
+					// 입력한 값 비교 : break조건 - 공백 문자이거나 null이면 
+					if(a == "" || a == null){
+						
+						break;
+					}
+					//if(!a)
+					// 입력한 값을 배열에 저장
+					arr.push(a);
+				}
+				// 출력
+				document.querySelector('#result1').innerHTML = arr; 
+			}
+			
+			function proc2() {
+				// 배열선언
+				arr=[];
+				while(true){
+					// 입력
+					a = prompt("정수를 입력하세요");
+					// 중복된 값인지 아닌지 비교
+					// 중복된 값이면 continue;
+					idx = arr.indexOf(a);
+					if(idx >= 0){
+						continue;
+					}
+					// 배열에 저장
+					arr.push(a);
+					if(arr.length >= 5){
+						break;
+					}
+				
+				}
+				// 출력
+				document.querySelector('#result2').innerHTML = arr;
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>연습1</h3>
+			사람 이름을 계속 입력받아 배열에 저장하고 그 저장된 이름을 출력하는 프로그램을 작성하시오.<br>
+			입력 : prompt<br>
+			종료 : 공백문자나 취소버튼 클릭<br>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div>
+		
+		
+		<div class="box">
+			<h3>연습2</h3>
+			서로 중복되지 않은 정수 5개를 입력받아 출력하는 프로그램을 작성하시오.<br>
+			<input type="button" value="확인" onclick="proc2()">
+			<div id="result2"></div>
+		</div>
+	</body>
+</html>

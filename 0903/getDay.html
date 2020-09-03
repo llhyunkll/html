@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>getDay_요일구하기</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			now = new Date();
+			
+			function proc1() {
+				//now = new Date(2000,03-1,14);
+				
+				res = "오늘 : " + now.toLocaleDateString() + "<br>";
+				
+				day = now.getDay();
+				//alert(day);
+				
+				switch(day){
+				case 0: res += "일요일입니다"; break;
+				case 1: res += "월요일입니다"; break;
+				case 2: res += "화요일입니다"; break;
+				case 3: res += "수요일입니다"; break;
+				case 4: res += "목요일입니다";break;
+				case 5: res += "금요일입니다";break;
+				case 6: res += "토요일입니다"; break;
+				}
+				
+				document.querySelector('#result1').innerHTML = res;
+			}
+			
+			function proc2() {
+				days = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"]
+				
+				res = "오늘 : " + now.toLocaleDateString() + "<br>";
+				
+				res += days[now.getDay()] + "입니다"; 
+				//now가 전역변수여서 proc1에 있는 것을 사용해도 되지만 
+				// proc1이 실행되고 2를 사용해야함
+				// function 밖으로 해서 실행순서 상관없이 실행되도록 함
+				
+				document.querySelector('#result2').innerHTML = res;
+				
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>요일 구하기</h3>
+			getDay() : 0~6 일요일 ~ 토요일 <br>
+			switch()비교<br>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div>
+		
+		<div class="box">
+			<h3>요일 구하기</h3>
+			getDay() : 0~6 일요일 ~ 토요일 <br>
+			배열을 이용해서 비교 days = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"] <br>
+			<input type="button" value="확인" onclick="proc2()">
+			<div id="result2"></div>
+		</div>
+	</body>
+</html>
