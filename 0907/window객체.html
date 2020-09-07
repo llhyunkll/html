@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>window객체</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1() {
+				window.open("winsub.html", "_blank", "top=200 left=300 width=500 height=500");
+				//window.open("winsub.html");
+				// name으로 지정한 "네이버"가 실행된 화면에는 노출되지 않음. 논리적인 이름...
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>window객체</h3>
+			클릭하면 새로운 창을 연다.<br>
+			window.open(url, name, specs);<br>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div>
+	</body>
+</html>
