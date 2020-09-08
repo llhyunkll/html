@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>location객체메소드</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<style>
+			.box input[type=button]{
+				font-size:0.9em;
+				background:#009688;
+			}
+		</style>
+		<script>
+			function proc2() {
+				location.href="/webProject/test.jsp";
+			}
+			
+			function goPage() {
+				location.href="/webProject/test.jsp?id=kk";
+			}
+			function gopagePost() {
+				document.myForm.action="testpost.jsp";
+				document.myForm.method="post";
+				document.myForm.submit();
+			}
+			function goReplace(str) {
+				//실행후 뒤로 가기가 되지 않는다.
+				location.replace(str);
+			}
+			function goReload() {
+				// 배열과 랜덤을 이용
+				// 랜덤을 발생하여 배열의 값을 선택
+				// result1에 출력 - 3초 후에 출력 전 화면으로 돌아간다.
+				str = ["Hello", "happy", "javascript", "jQuery", "HTML", "CSS"];
+				// str[0], str[4], str[3]
+				random = Math.floor(Math.random()*str.length);
+				//str[random]
+				
+				// 출력
+				out = document.querySelector('#result1');
+				out.innerHTML = str[random];
+				out.style.color='red';
+				out.style.fontSize='2.0em';
+				
+				setTimeout(function(){
+					location.reload();
+				}, 3000);
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>Location객체</h3>
+			- 자동으로 특정 페이지 이동시 사용(location.href="")
+			<input type="button" value="페이지이동" onclick="proc2()"><br>
+			
+			- a태그 이용 (location.href="") <a href="javascript:goPage()">공지사항목록</a><br>
+			
+			이벤트사용(get location.href="")<input type="button" value="공지사항목록" onclick="goPage()"><br>
+			
+			이벤트사용(post)
+			<form name="myForm">
+				<input type="hidden" value="korea" name="name">
+				<input type="button" value="공지사항목록" onclick="gopagePost()">
+			</form>
+			<br>
+			- 새로운 문서로 대체 
+			<input type="button" value="공지사항목록" onclick="goReplace('/webProject/test.jsp')"><br>
+			
+			- 현재문서를 다시 로드
+			<input type="button" value="페이지재호출" onclick="goReload()"><br>
+			<br><br>
+			<div id="result1"></div>
+		</div>
+	</body>
+</html>

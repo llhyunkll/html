@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DomTest</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1() {
+				//ultag = document.getElementsByTagName("ul")[0];
+				ultag = document.querySelector("ul"); // 0번째 요소만 찾음
+				
+				// allitem = ultag.getElementsByTagName("li");
+				allitem = ultag.querySelectorAll("li");
+				
+				res = "";
+				out = document.querySelector('#result1');
+				
+				for(i=0; i < allitem.length; i++){
+					res += allitem[i].firstChild.data + "<br>";
+				}
+				
+				out.innerHTML = res;
+				
+			}
+			
+			function proc2() {
+				ultag = document.querySelectorAll("ul")[1];
+				allitem = ultag.getElementsByTagName("li");
+				
+				res = "";
+				
+				for(i=0; i < allitem.length; i++){
+					imgdata = allitem[i].firstChild.data;
+					// 실행하면서 태그를 새로 생성
+					imgtag = document.createElement("img");
+					//<img src="" width="" heigth="">
+					imgtag.src="../img/" + imgdata + ".jpg";
+					allitem[i].appendChild(imgtag); //부모객체.appendChild();
+					
+				}
+			}
+			
+			function proc3(vli) {
+				// vli : 클릭한 li
+				imgdata = vli.firstChild.data;
+			
+				imgtag = document.createElement("img");
+				imgtag.src = "../img/" + imgdata +".jpg";
+				
+				vli.appendChild(imgtag);
+				
+			}
+		</script>
+		<style>
+			.box img {
+				height:70px;
+				width:70px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>Dom</h3>
+			각 아이템 요소의 text data 가져오기<br>
+				<ul>
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+					<li>List item 4</li>
+					<li>List item 5</li>
+				</ul>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div>	
+		<div class="box">
+			<h3>새로운 이미지 생성</h3>
+			버튼을 클릭하면 각 요소에 해당하는 이미를 생성해서 추가한다.<br>
+				<ul>
+					<li>단풍</li>
+					<li>국화</li>
+					<li>공유</li>
+					<li>수지</li>
+					<li>수국</li>
+				</ul>
+			<input type="button" value="확인" onclick="proc2()">
+		</div>
+		
+		<div class="box">
+			<h3>새로운이미지</h3>
+			각 아이템 요소를 클릭하면 이미지 요소를 생성해서 추가한다.<br>
+				<ul>
+					<li onclick="proc3(this)">단풍</li>
+					<li onclick="proc3(this)">국화</li>
+					<li onclick="proc3(this)">공유</li>
+					<li onclick="proc3(this)">수지</li>
+					<li onclick="proc3(this)">수국</li>
+				</ul>
+		</div>
+	</body>
+</html>
