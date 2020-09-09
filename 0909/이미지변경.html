@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>이미지변경</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1() {
+				vimg = document.querySelector('img');
+				// alert(vimg.src); //전체 경로를 가져온다
+				vsrc = vimg.src;
+				if(vsrc.match("on") == null){ // off인 상태 - on으로 변경
+					vimg.src="../img/sw_on.png";
+				}else{ // on상태 - off로 변경
+					vimg.src="../img/sw_off.png";
+				} 
+			}
+			
+			function gameStart() { 
+				com = ["가위", "바위", "보"];
+				rando = Math.floor(Math.random()*com.length); 
+				// com[0], com[rando]
+				
+				// computer결정
+				computer = com[rando];
+				
+				// user 입력
+				user = prompt("가위,바위,보");
+				// 비교
+				res = "";
+				if(computer == user){
+					res += "비겼습니다 <br>";
+				}else if(user == "가위" && computer == "보"
+						|| user == "바위" && computer == "가위"
+						|| user == "보" && computer == "바위"){
+					res += "user가 이겼습니다<br>";
+					
+				}else{
+					res += "computer가 이겼습니다<br>";
+				}
+				// 결과출력
+				document.querySelector('#result1').innerHTML = res;
+				// 이미지 변경
+				userimg = document.querySelector('#iuser');
+				//alert(userimg.src);
+				userimg.src="../img/"+ user +"_좌.PNG"; 
+				comimg = document.querySelector('#icom');
+				comimg.src = "../img/"+ computer + "_우.PNG";
+			}
+		</script>
+		<style>
+			table {
+				width:700px;
+				text-align:center;
+			}
+			#iu {
+				background:#7ce4809e;
+			}
+			#ic {
+				background:#9d00ffa8;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>이미지변경</h3>
+			src의 속성값을 바꾼다.<br>
+			match(검색문자열)를 이용한다 - 검색문자열이 있는지 없는지 비교<br>
+			있으면 배열로 리턴, 없으면 null을 리턴한다.<br>
+			if(vsrc.match("on") == null){ src의 값을 off로 변경 }<br>
+			else{ src의 값을 on으로 변경 }<br>
+			<img src="../img/sw_on.png" alt="스위치온이미지" onclick="proc1()">
+		</div>
+		
+		
+		
+		<div class="box">
+			<h3>이미지변경</h3>
+			<table border="1">
+				<tr>
+					<td colspan="2"><input type="button" value="게임시작" onclick="gameStart()"></td>
+				</tr>
+				<tr>
+					<td id="iu">사람</td>
+					<td id="ic">컴퓨터</td>
+				</tr>
+				<tr>
+					<td><img src="../img/바위_좌.PNG" id="iuser"></td>
+					<td><img src="../img/바위_우.PNG" id="icom"></td>
+				</tr>
+				<tr>
+					<td colspan="2" id="result1"></td>
+				</tr>
+			</table>
+
+		</div>
+	</body>
+</html>
