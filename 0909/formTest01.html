@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form문제1</title>
+		<script>
+			function proc1() {
+				temp = document.querySelector('#num').value;
+				res = temp +"단 출력\n";
+				
+				for(i=1; i<=9; i++){
+					res += temp + " * " + i + " = " + (temp*i) + "\n";
+				}
+				document.querySelector('#result').innerHTML = res;
+			}
+		</script>
+		<style>
+			input[type=text]{
+				width:25px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="num">단
+		<input type="button" value="출력" onclick="proc1()"><br>
+		<textarea id="result" rows="20" cols="20"></textarea>
+		
+	</body>
+</html>
